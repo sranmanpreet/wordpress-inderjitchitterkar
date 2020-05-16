@@ -36,15 +36,14 @@
                             <?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ) ?>
                                             ) top center;">
                     <div class="hero-container">
-                        <h1><?php the_title() ?></h1>
-                        <h2><?php the_field('landing_page_subtitle') ?></h2>
+                        <h1><?php the_field('landing_page_subtitle') ?></h1>
                         <div class="wrap-cap">
-                            <h3 class="cap-1">A Single Stop Solution to Artify Yourself</h3>
-                            <h3 class="cap-2">High Quality Art Works for Home and Office</h3>
-                            <h3 class="cap-3">Art Works which Meet your Demands</h3>
-                            <h3 class="cap-4">Promote Your Brand</h3>
+                            <h3 class="cap-1">I can help you Artify Yourself</h3>
+                            <h3 class="cap-2">I can create High Quality Art Works for your Home or Office</h3>
+                            <h3 class="cap-3">I can create Art Works which belong only to You</h3>
+                            <h3 class="cap-4">I can help you Promote Your Brand</h3>
                         </div>
-                        <a href="#about" class="btn-get-started">Get Started</a>
+                        <a href="<?php echo site_url() . '/shop' ?>" class="btn-get-started">Let Me Show you our Art Gallery</a>
                     </div>
                 </section>
                 <!-- End Hero Section -->
@@ -85,22 +84,8 @@
                     </section>
                     <!-- End Services Section -->
 
-                    <!-- ======= Call To Action Section ======= -->
-                    <section id="call-to-action">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-9 text-center text-lg-left">
-                                    <h3 class="cta-title">Call To Action</h3>
-                                    <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                                <div class="col-lg-3 cta-btn-container text-center">
-                                    <a class="cta-btn align-middle" href="#">Call To Action</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-                    <!-- End Call To Action Section -->
+                    <div id="landing3" style="background-image: url(<?php echo get_theme_file_uri('assets/img/landing3.jpg') ?>)">
+                    </div>
 
                     <!-- ======= Popular Products Section ======= -->
                     <section id="popular-products">
@@ -115,7 +100,7 @@
                                     foreach ($products as $product) {
                                         ?>
                                         <div class="popular-products-item">
-                                             <a href="<?php get_permalink($product->get_id()); ?>">
+                                             <a href="<?php echo get_permalink($product->get_id()); ?>">
                                                 <?php echo $product->get_image() ?>
                                                 <div class="details">
                                                     <h4><?php echo $product->get_name() ?></h4>
@@ -132,6 +117,8 @@
                     </section>
                     <!-- End Popular Products Section -->
 
+                    <!-- Advertisements Section -->
+
                     <div id="advertisement-landing" style="background-image: url(<?php echo get_theme_file_uri('assets/img/advertisement-landing.jpg') ?>)">
                         <section id="advertisements">
                             <div class="container">
@@ -141,9 +128,7 @@
                                 </div>
                                 <div class="advertisements-wrapper">
                                     <div class="advertisement-desc-1">
-                                        <hr>
                                         <p>Our COLORS, Your BRAND </p>
-                                            <hr>
                                         <p>Let's Conquer The World TOGETHER</p>
                                     </div>
                                     <div class="advertisement-desc-2">
@@ -157,6 +142,30 @@
                                 </div>
                             </div>
                         </section>
+                    </div>
+                    <!-- End Advertisements Section -->
+
+                    <!-- ======= Our Clients Section ======= -->
+                    <section id="clients">
+                        <div class="container">
+                            <div class="section-header">
+                                <h3 class="section-title">Our Clients</h3>
+                                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                            </div>
+                            <div id="clients-wrapper">
+                                <?php 
+                                    for($counter=1; $counter<7; $counter++ ){
+                                        ?>
+                                            <img class="clientLogo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/client' . $counter . '.png' ?>">
+                                        <?php
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Our Clients Section -->
+
+                    <div id="landing2" style="background-image: url(<?php echo get_theme_file_uri('assets/img/landing2.jpg') ?>)">
                     </div>
 
                     <!-- ======= Contact Section ======= -->
@@ -175,18 +184,18 @@
                             <div class="contact-details-section">
                                 <div class="info">
                                     <div>
-                                        
-                                        <p><i class="fa fa-map-marker"></i>A108 Adam Street<br>New York, NY 535022</p>
+                                        <i class="fa fa-map-marker"></i>
+                                        <p>A108 Adam Street, New York, NY 535022</p>
                                     </div>
 
                                     <div>
-                                        
-                                        <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                        <i class="fa fa-envelope"></i>
+                                        <p>info@example.com</p>
                                     </div>
 
                                     <div>
-                                        
-                                        <p><i class="fa fa-phone"></i>+1 5589 55488 55s</p>
+                                        <i class="fa fa-phone"></i>
+                                        <p>+1 5589 55488 55s</p>
                                     </div>
                                 </div>
 
@@ -200,8 +209,6 @@
 
                 </main>
                 <!-- End #main -->
-
-                <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
             <!-- Custom landing page content ends here -->
 
@@ -257,7 +264,9 @@
 
 		<?php do_action( 'ocean_after_outer_wrap' ); ?>
 
-		<?php wp_footer(); ?>
+        <?php wp_footer(); ?>
+        
+        <?php get_footer() ?>   
 
 	</body>
 </html>

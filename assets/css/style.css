@@ -964,7 +964,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    height: 80vh;
+    height: 100vh;
     z-index: -1;
     padding-top: 10vh;
 }
@@ -985,6 +985,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 768px) {
+    #advertisement-landing {
+        height: 80vh;
+    }
     .advertisements-wrapper {
         grid-template-columns: 50% 50%;
     }
@@ -1028,6 +1031,33 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
+/* Our Clients Section
+--------------------------------*/
+
+#clients {
+    background: #f7f7f7;
+    padding: 80px 0 40px 0;
+}
+
+#clients-wrapper {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-column-gap: 10px;
+}
+
+.clientLogo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    #clients-wrapper {
+        grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.5%;
+    }
+}
+
+
 /* Contact Section
 --------------------------------*/
 
@@ -1038,28 +1068,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .contact-details-section {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-column-gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .contact-details-section {
+        grid-template-columns: 50% 50%;
+    }
 }
 
 .contact-form {
     margin-top: 50px;
 }
 
-#contact #google-map {
-    height: 300px;
-    margin-bottom: 20px;
-}
-
 #contact .info {
     margin-top: 150px;
     color: #333333;
-    text-align: center;
 }
 
 #contact .info i {
     font-size: 32px;
     color: #2dc997;
+    float: left;
 }
 
 #contact .info p {
@@ -1073,25 +1104,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-top: 5px;
 }
 
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-
-#footer {
-    background: #343b40;
-    padding: 30px 0;
-    color: #fff;
-    font-size: 14px;
-}
-
-#footer .copyright {
-    text-align: center;
-}
-
-#footer .credits {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 13px;
-    color: #ccc;
+#landing2,
+#landing3 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    z-index: -1;
+    padding-top: 10vh;
 }
