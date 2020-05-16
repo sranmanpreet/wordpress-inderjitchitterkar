@@ -185,7 +185,7 @@ h6 {
 
 #hero h1 {
     margin: 30px 0 10px 0;
-    font-size: 48px;
+    font-size: 58px;
     font-weight: 700;
     line-height: 56px;
     text-transform: uppercase;
@@ -231,6 +231,65 @@ h6 {
 #hero .btn-get-started:hover {
     background: #2dc997;
     border: 2px solid #2dc997;
+}
+
+.wrap-cap h3 {
+    color: white;
+}
+
+@keyframes hero-caption-animation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    25% {
+        visibility: visible;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    75% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.cap-1 {
+    visibility: hidden;
+    animation-name: hero-caption-animation;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+.cap-2 {
+    visibility: hidden;
+    animation-name: hero-caption-animation;
+    animation-duration: 8s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.cap-3 {
+    visibility: hidden;
+    animation-name: hero-caption-animation;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+}
+
+.cap-4 {
+    visibility: hidden;
+    animation-name: hero-caption-animation;
+    animation-duration: 8s;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
 }
 
 
@@ -815,15 +874,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-/* Portfolio Section
+/* Popular Products Section
 --------------------------------*/
 
-#portfolio {
+#popular-products {
     background: #f7f7f7;
     padding: 80px 0;
 }
 
-#portfolio #portfolio-wrapper {
+#popular-products #popular-products-wrapper {
     padding-right: 15px;
     display: grid;
     grid-template-columns: auto;
@@ -831,46 +890,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 768px) {
-    #portfolio #portfolio-wrapper {
+    #popular-products #popular-products-wrapper {
         grid-template-columns: auto auto;
     }
 }
 
 @media (min-width: 992px) {
-    #portfolio #portfolio-wrapper {
+    #popular-products #popular-products-wrapper {
         grid-template-columns: auto auto auto;
     }
 }
 
-#portfolio #portfolio-flters {
-    padding: 0;
-    margin: 0 0 45px 0;
-    list-style: none;
-    text-align: center;
-}
-
-#portfolio #portfolio-flters li {
-    cursor: pointer;
-    margin: 0 10px;
-    display: inline-block;
-    padding: 10px 22px;
-    font-size: 12px;
-    line-height: 20px;
-    color: #666666;
-    border-radius: 4px;
-    text-transform: uppercase;
-    background: #fff;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
-    background: #2dc997;
-    color: #fff;
-}
-
-#portfolio .portfolio-item {
+#popular-products .popular-products-item {
     position: relative;
     height: 200px;
     overflow: hidden !important;
@@ -879,28 +910,29 @@ body.mobile-nav-active #mobile-nav-toggle {
     transform: scale(1);
 }
 
-#portfolio .portfolio-item a {
+#popular-products .popular-products-item a {
     display: block;
     margin-right: 15px;
 }
 
-#portfolio .portfolio-item img {
+#popular-products .popular-products-item img {
     position: relative;
     top: 0;
     transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#portfolio .portfolio-item .details {
+#popular-products .popular-products-item .details {
     height: 50px;
     background: #2dc997;
     position: absolute;
     width: 100%;
+    max-width: 300px;
     height: 50px;
     bottom: -50px;
     transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#portfolio .portfolio-item .details h4 {
+#popular-products .popular-products-item .details h4 {
     font-size: 14px;
     font-weight: 700;
     color: #fff;
@@ -908,72 +940,91 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 0;
 }
 
-#portfolio .portfolio-item .details span {
+#popular-products .popular-products-item .details span {
     display: block;
     color: #fff;
     font-size: 13px;
     padding-left: 8px;
 }
 
-#portfolio .portfolio-item:hover .details {
+#popular-products .popular-products-item:hover .details {
     bottom: 0;
 }
 
-#portfolio .portfolio-item:hover img {
+#popular-products .popular-products-item:hover img {
     top: -30px;
 }
 
 
-/* Team Section
+/* Advertisement Section
 --------------------------------*/
 
-#team {
-    background: #fff;
-    padding: 80px 0 60px 0;
+#advertisement-landing {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    z-index: -1;
+    padding-top: 10vh;
 }
 
-#team .member {
+.advertisements-header .section-title {
+    color: white;
+}
+
+.advertisements-header .section-description {
+    color: white;
+}
+
+.advertisements-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 10px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .advertisements-wrapper {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.advertisement-desc-1 {
+    font-size: large;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-#team .member .pic {
-    margin-bottom: 15px;
-    overflow: hidden;
-    height: 260px;
+.advertisement-desc-2 .details {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vw;
+    font-family: cursive;
+    background-color: rgb(110, 110, 110);
+    opacity: 0.8;
+    color: rgb(255, 255, 255);
 }
 
-#team .member .pic img {
-    max-width: 100%;
+.advertisement-actions {
+    text-align: center;
 }
 
-#team .member h4 {
-    font-weight: 700;
-    margin-bottom: 2px;
-    font-size: 18px;
+.advertisement-actions button {
+    padding: 10px 30px;
+    background: rgb(46, 134, 150);
+    border-radius: 5px;
+    color: white;
+    border: none;
 }
 
-#team .member span {
-    font-style: italic;
-    display: block;
-    font-size: 13px;
+.advertisement-actions button:hover {
+    color: rgb(46, 134, 150);
+    background: white;
 }
 
-#team .member .social {
-    margin-top: 15px;
-}
-
-#team .member .social a {
-    color: #b3b3b3;
-}
-
-#team .member .social a:hover {
-    color: #2dc997;
-}
-
-#team .member .social i {
-    font-size: 18px;
-    margin: 0 2px;
+.advertisement-actions button:active {
+    color: rgb(31, 85, 95);
+    background: rgb(180, 180, 180);
 }
 
 
@@ -985,19 +1036,30 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 80px 0 40px 0;
 }
 
+.contact-details-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+}
+
+.contact-form {
+    margin-top: 50px;
+}
+
 #contact #google-map {
     height: 300px;
     margin-bottom: 20px;
 }
 
 #contact .info {
+    margin-top: 150px;
     color: #333333;
+    text-align: center;
 }
 
 #contact .info i {
     font-size: 32px;
     color: #2dc997;
-    float: left;
 }
 
 #contact .info p {
@@ -1009,117 +1071,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .info .email p {
     padding-top: 5px;
-}
-
-#contact .social-links {
-    padding-bottom: 20px;
-}
-
-#contact .social-links a {
-    font-size: 18px;
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-}
-
-#contact .social-links a:hover {
-    background: #2dc997;
-    color: #fff;
-}
-
-#contact .php-email-form .validate {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-#contact .php-email-form .error-message {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-#contact .php-email-form .sent-message {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-#contact .php-email-form .loading {
-    display: none;
-    background: #fff;
-    text-align: center;
-    padding: 15px;
-}
-
-#contact .php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #18d26e;
-    border-top-color: #eee;
-    -webkit-animation: animate-loading 1s linear infinite;
-    animation: animate-loading 1s linear infinite;
-}
-
-#contact .php-email-form input,
-#contact .php-email-form textarea {
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-}
-
-#contact .php-email-form input::focus,
-#contact .php-email-form textarea::focus {
-    background-color: #2dc997;
-}
-
-#contact .php-email-form button[type="submit"] {
-    background: #2dc997;
-    border: 0;
-    padding: 10px 24px;
-    color: #fff;
-    transition: 0.4s;
-}
-
-#contact .php-email-form button[type="submit"]:hover {
-    background: #51d8ad;
-}
-
-@-webkit-keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 

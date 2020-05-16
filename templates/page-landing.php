@@ -38,6 +38,12 @@
                     <div class="hero-container">
                         <h1><?php the_title() ?></h1>
                         <h2><?php the_field('landing_page_subtitle') ?></h2>
+                        <div class="wrap-cap">
+                            <h3 class="cap-1">A Single Stop Solution to Artify Yourself</h3>
+                            <h3 class="cap-2">High Quality Art Works for Home and Office</h3>
+                            <h3 class="cap-3">Art Works which Meet your Demands</h3>
+                            <h3 class="cap-4">Promote Your Brand</h3>
+                        </div>
                         <a href="#about" class="btn-get-started">Get Started</a>
                     </div>
                 </section>
@@ -81,7 +87,7 @@
 
                     <!-- ======= Call To Action Section ======= -->
                     <section id="call-to-action">
-                        <div class="container wow fadeIn">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-lg-9 text-center text-lg-left">
                                     <h3 class="cta-title">Call To Action</h3>
@@ -96,37 +102,24 @@
                     </section>
                     <!-- End Call To Action Section -->
 
-                    <!-- ======= Portfolio Section ======= -->
-                    <section id="portfolio">
-                        <div class="container wow fadeInUp">
+                    <!-- ======= Popular Products Section ======= -->
+                    <section id="popular-products">
+                        <div class="container">
                             <div class="section-header">
                                 <h3 class="section-title">Popular Arts</h3>
                                 <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                             </div>
-                            <div class="row">
-
-                                <div class="col-lg-12">
-                                    <ul id="portfolio-flters">
-                                        <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
-                                        <li data-filter=".filter-app">App</li>
-                                        <li data-filter=".filter-card">Card</li>
-                                        <li data-filter=".filter-logo">Logo</li>
-                                        <li data-filter=".filter-web">Web</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div id="portfolio-wrapper">
+                            <div id="popular-products-wrapper">
                                 <?php
                                     $products = wc_get_products(array() );
                                     foreach ($products as $product) {
                                         ?>
-                                        <div class="portfolio-item filter-app">
-                                             <a href="assets/img/portfolio/app1.jpg" data-gall="portfolioGallery" class="venobox">
+                                        <div class="popular-products-item">
+                                             <a href="<?php get_permalink($product->get_id()); ?>">
                                                 <?php echo $product->get_image() ?>
                                                 <div class="details">
                                                     <h4><?php echo $product->get_name() ?></h4>
-                                                    <span>Alosdrellld dono par</span>                                                
+                                                    <span>Alosdred dono par</span>                                    
                                                 </div>
                                              </a>
                                         </div>
@@ -137,7 +130,34 @@
 
                         </div>
                     </section>
-                    <!-- End Portfolio Section -->
+                    <!-- End Popular Products Section -->
+
+                    <div id="advertisement-landing" style="background-image: url(<?php echo get_theme_file_uri('assets/img/advertisement-landing.jpg') ?>)">
+                        <section id="advertisements">
+                            <div class="container">
+                                <div class="section-header advertisements-header">
+                                    <h3 class="section-title">Advertisements</h3>
+                                    <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                                </div>
+                                <div class="advertisements-wrapper">
+                                    <div class="advertisement-desc-1">
+                                        <hr>
+                                        <p>Our COLORS, Your BRAND </p>
+                                            <hr>
+                                        <p>Let's Conquer The World TOGETHER</p>
+                                    </div>
+                                    <div class="advertisement-desc-2">
+                                        <p class="details"><b>"</b> Our colors make the walls speak your BRAND and expand your customer base. We advertise brands by painting walls at public places. Huge experience of the artists and businessmen brings unique expertise which help brands to
+                                            grab attention of potential customers. <b>"</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="advertisement-actions">
+                                    <button>Get Quote</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
 
                     <!-- ======= Contact Section ======= -->
                     <section id="contact">
@@ -148,73 +168,32 @@
                             </div>
                         </div>
 
-                        <!-- Uncomment below if you wan to use dynamic maps -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.752845104816!2d76.63815221497535!3d30.725347881639696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe5602dcb8079%3A0x5b78b638d2df428f!2s1138%2C%20JTPL%20City%20Main%20Rd%2C%20Sector%20115%2C%20Khuni%20Majra%2C%20Punjab%20140307!5e0!3m2!1sen!2sin!4v1589612121587!5m2!1sen!2sin"
                             width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-                        <div class="container wow fadeInUp mt-5">
-                            <div class="row justify-content-center">
-
-                                <div class="col-lg-3 col-md-4">
-
-                                    <div class="info">
-                                        <div>
-                                            <i class="fa fa-map-marker"></i>
-                                            <p>A108 Adam Street<br>New York, NY 535022</p>
-                                        </div>
-
-                                        <div>
-                                            <i class="fa fa-envelope"></i>
-                                            <p>info@example.com</p>
-                                        </div>
-
-                                        <div>
-                                            <i class="fa fa-phone"></i>
-                                            <p>+1 5589 55488 55s</p>
-                                        </div>
+                            
+                        <div class="container">
+                            <div class="contact-details-section">
+                                <div class="info">
+                                    <div>
+                                        
+                                        <p><i class="fa fa-map-marker"></i>A108 Adam Street<br>New York, NY 535022</p>
                                     </div>
 
-                                    <div class="social-links">
-                                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                    <div>
+                                        
+                                        <p><i class="fa fa-envelope"></i>info@example.com</p>
                                     </div>
 
-                                </div>
-
-                                <div class="col-lg-5 col-md-8">
-                                    <div class="form">
-                                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                            <div class="form-group">
-                                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                                <div class="validate"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                                <div class="validate"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                <div class="validate"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                                <div class="validate"></div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="loading">Loading</div>
-                                                <div class="error-message"></div>
-                                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                                            </div>
-                                            <div class="text-center"><button type="submit">Send Message</button></div>
-                                        </form>
+                                    <div>
+                                        
+                                        <p><i class="fa fa-phone"></i>+1 5589 55488 55s</p>
                                     </div>
                                 </div>
 
+                                <div class='contact-form'>
+                                    <?php echo do_shortcode('[wpforms id="246"]') ?> 
+                                </div>
                             </div>
-
                         </div>
                     </section>
                     <!-- End Contact Section -->
