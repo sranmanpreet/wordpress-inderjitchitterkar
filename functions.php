@@ -77,3 +77,24 @@ function inderjitchitterkar_sidebar_registration(){
 }
 
 add_action('widgets_init', 'inderjitchitterkar_sidebar_registration');
+
+function add_last_nav_item($items) {
+	if(is_user_logged_in()){
+		$items .= '
+			<li><a href="' . site_url('/my-account') . '" role="button" data-toggle="modal">My Account</a></li>
+			<li><a href="' . wp_logout_url(esc_url(site_url('/'))) .  '" role="button" data-toggle="modal">Logout</a></li>
+			';
+	} else {
+		$items .= '<li><a href="' . esc_url(site_url('/my-account')) . '" role="button" data-toggle="modal">Login</a></li>';
+		$items .= '<li><a href="' . esc_url(site_url('/signin-signup')) . '" role="button" data-toggle="modal">SignUp</a></li>';
+	}
+	return $items;
+}
+
+add_filter('wp_nav_menu_items','add_last_nav_item');
+
+function yourloginoverrides() {
+	// do some check and call wp_redirect if its true or whatever you wanted to do
+}
+
+add_action( 'login_init', 'yourloginoverrides' );
