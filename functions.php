@@ -52,3 +52,28 @@ function inderjitchitterkar_features() {
 	));
 }
 add_action("after_setup_theme", 'inderjitchitterkar_features');
+
+function inderjitchitterkar_sidebar_registration(){
+
+	// Arguments used in all register_sidebar() calls.
+	$shared_args = array(
+		'before_title'  => '',
+		'after_title'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Contact Us - Landing Page', 'inderjitchitterkar' ),
+				'id'          => 'contact-us-landing-page',
+				'description' => __( 'Widgets in this area will be displayed in the Contact us section on landing page.', 'inderjitchitterkar' ),
+			)
+		)
+	);
+	
+}
+
+add_action('widgets_init', 'inderjitchitterkar_sidebar_registration');

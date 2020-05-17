@@ -58,27 +58,27 @@
                                 <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                             </div>
                             <div class="services-grid-container">
-                                <div class="box">
-                                    <img class="product img-responsive" src="<?php echo get_theme_file_uri('assets/img/service1.jpg') ?>" alt="">
-                                    <div class="middle">
-                                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores velit eaque hic est eligendi, veritatis quae illo cumque dolorum! Est saepe nam esse perspiciatis quo illum pariatur a voluptas ab odit excepturi.</div>
+                            <?php
+                                $services = new WP_Query(
+                                        array(
+                                            'post_type' => 'service'
+                                        )
+                                    );
+                                while($services->have_posts()){
+                                    $services->the_post();
+                                    ?>
+                                    <div class="box">
+                                        <img class="product img-responsive" src="<?php echo get_field('service_image') ?>" alt="">
+                                        <div class="middle">
+                                            <div class="text"><?php echo get_field('service_description') ?></div>
+                                        </div>
+                                        <h6 class="product-title"><?php the_title() ?></h6>
                                     </div>
-                                    <h6 class="product-title">High Quality Artwork Prints</h6>
-                                </div>
-                                <div class="box">
-                                    <img class="product img-responsive" src="<?php echo get_theme_file_uri('assets/img/service2.jpg') ?>" alt="">
-                                    <div class="middle">
-                                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores velit eaque hic est eligendi, veritatis quae illo cumque dolorum! Est saepe nam esse perspiciatis quo illum pariatur a voluptas ab odit excepturi.</div>
-                                    </div>
-                                    <h6 class="product-title">Artwork on Demand</h6>
-                                </div>
-                                <div class="box">
-                                    <img class="product img-responsive" src="<?php echo get_theme_file_uri('assets/img/service3.jpg') ?>" alt="">
-                                    <div class="middle">
-                                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores velit eaque hic est eligendi, veritatis quae illo cumque dolorum! Est saepe nam esse perspiciatis quo illum pariatur a voluptas ab odit excepturi.</div>
-                                    </div>
-                                    <h6 class="product-title">Advertisements</h6>
-                                </div>                                
+
+                                    <?php
+
+                                }
+                            ?>                      
                             </div>
                         </div>
                     </section>
@@ -138,7 +138,8 @@
                                     </div>
                                 </div>
                                 <div class="advertisement-actions">
-                                    <button>Get Quote</button>
+                                    <a href="<?php echo site_url() . '/contact' ?>"><button>Get Quote</button></a>
+                                    
                                 </div>
                             </div>
                         </section>
@@ -154,11 +155,18 @@
                             </div>
                             <div id="clients-wrapper">
                                 <?php 
-                                    for($counter=1; $counter<7; $counter++ ){
+                                    $clients = new WP_Query(
+                                        array(
+                                            'post_type'=> 'client'
+                                        )
+                                        );
+                                    while($clients->have_posts()){
+                                        $clients->the_post();
                                         ?>
-                                            <img class="clientLogo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/client' . $counter . '.png' ?>">
+                                            <img class="clientLogo" src="<?php echo get_field('client_logo') ?>">
                                         <?php
                                     }
+                                    
                                 ?>
                             </div>
                         </div>
@@ -183,7 +191,7 @@
                         <div class="container">
                             <div class="contact-details-section">
                                 <div class="info">
-                                    <div>
+                                    <!-- <div>
                                         <i class="fa fa-map-marker"></i>
                                         <p>A108 Adam Street, New York, NY 535022</p>
                                     </div>
@@ -196,7 +204,8 @@
                                     <div>
                                         <i class="fa fa-phone"></i>
                                         <p>+1 5589 55488 55s</p>
-                                    </div>
+                                    </div> -->
+                                    <?php dynamic_sidebar( 'contact-us-landing-page' ); ?>
                                 </div>
 
                                 <div class='contact-form'>

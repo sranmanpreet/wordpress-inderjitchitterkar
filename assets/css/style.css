@@ -1070,6 +1070,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 10px;
+    padding-top: 50px;
 }
 
 @media (min-width: 768px) {
@@ -1078,18 +1079,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.contact-form {
-    margin-top: 50px;
-}
-
 #contact .info {
-    margin-top: 150px;
     color: #333333;
 }
 
 #contact .info i {
     font-size: 32px;
-    color: #2dc997;
     float: left;
 }
 
