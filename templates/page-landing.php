@@ -43,7 +43,7 @@
                             <h3 class="cap-3">I can create Art Works which belong only to You</h3>
                             <h3 class="cap-4">I can help you Promote Your Brand</h3>
                         </div>
-                        <a href="<?php echo site_url() . '/shop' ?>" class="btn-get-started">Let Me Show you our Art Gallery</a>
+                        <a href="<?php echo get_permalink(19) ?>" class="btn-get-started">Let Me Show you our Art Gallery</a>
                     </div>
                 </section>
                 <!-- End Hero Section -->

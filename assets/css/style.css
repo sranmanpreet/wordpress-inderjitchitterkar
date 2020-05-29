@@ -1109,3 +1109,39 @@ body.mobile-nav-active #mobile-nav-toggle {
     z-index: -1;
     padding-top: 10vh;
 }
+
+#advertisements-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    z-index: -1;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+#advertisements-banner h1 {
+    color: yellow;
+    font-size: 2rem;
+}
+
+#advertisements-banner p {
+    color: cyan;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    #advertisements-banner h1 {
+        font-size: 4rem;
+    }
+    #advertisements-banner p {
+        font-size: 2rem;
+    }
+}
+
+#advertisement-form-heading {
+    border-bottom: 5px solid green;
+    font-size: 3rem;
+}
