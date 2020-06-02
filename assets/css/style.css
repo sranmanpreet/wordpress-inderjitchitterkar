@@ -1145,3 +1145,43 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-bottom: 5px solid green;
     font-size: 3rem;
 }
+
+
+/********* Exclusive for you template *************/
+
+.exclusive-for-you-banner {
+    background-color: rgb(243, 243, 243);
+    padding: 20px 10px;
+    margin: 20px 0;
+}
+
+.exclusive-for-you-banner-heading {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.how-to-order {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.how-to-order-item {
+    text-align: center;
+}
+
+.how-to-order-item img {
+    max-width: 50px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .exclusive-for-you-banner-heading {
+        font-size: xx-large;
+    }
+    .how-to-order {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+    .how-to-order-item img {
+        max-width: 60px;
+    }
+}
