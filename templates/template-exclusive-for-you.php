@@ -60,10 +60,10 @@
 					<div class="exclusive-for-you-form">
 						<form action="" method="post">
 
-							<label for="uname"><b>Username</b></label>
-							<input type="text" placeholder="Enter Username" name="uname" required>
+							<label for="artType"><b>Art Type</b></label>
+							<input type="text" placeholder="Select Art Type" name="artType" required>
 
-							<label for="psw"><b>Password</b></label>
+							<label for="psw"><b>Art Size</b></label>
 							<input type="password" placeholder="Enter Password" name="psw" required>
 
 							<button type="submit">Login</button>

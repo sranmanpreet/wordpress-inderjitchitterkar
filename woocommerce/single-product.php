@@ -33,7 +33,14 @@ get_header( 'shop' ); ?>
 
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			<?php 
+				if( 421 == get_the_ID()){
+					wc_get_template_part( 'content', 'exclusive-for-you-product' ); 
+				} else{
+					wc_get_template_part( 'content', 'single-product' ); 
+				}
+			
+			?>
 
 		<?php endwhile; // end of the loop. ?>
 
