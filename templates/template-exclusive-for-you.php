@@ -37,13 +37,13 @@
 							<img src="<?php echo get_theme_file_uri('assets/img/upload-photo.svg') ?>" alt="upload-photo">
 							<p>Upload Photo</p>
 						</div>
-						<div class="how-to-order-item"s>
-							<img src="<?php echo get_theme_file_uri('assets/img/select-art-type.svg') ?>" alt="select-art-type">
-							<p>Select Art Type</p>
-						</div>
 						<div class="how-to-order-item">
 							<img src="<?php echo get_theme_file_uri('assets/img/select-work-size.svg') ?>" alt="select-work-size">
 							<p>Select Work Size</p>
+						</div>
+						<div class="how-to-order-item"s>
+							<img src="<?php echo get_theme_file_uri('assets/img/select-art-type.svg') ?>" alt="select-art-type">
+							<p>Select Art Type</p>
 						</div>
 						<div class="how-to-order-item">
 							<img src="<?php echo get_theme_file_uri('assets/img/half-payment.svg') ?>" alt="half-payment">

@@ -33,17 +33,23 @@ if( ! class_exists( 'wau_front_end_class' ) ){
     
     function load_scripts(){
       
+      add_action( 'woocommerce_before_cart_contents', array(&$this, 'wau_front_end_cart_scripts_js') );
       add_action( 'woocommerce_before_single_product', array(&$this, 'wau_front_end_scripts_js') );
       add_action( 'woocommerce_before_single_product', array(&$this, 'wau_front_end_scripts_css') );
       
     }
     
     function wau_front_end_scripts_js(){
-      
-      if( is_product() ){
-        //wp_enqueue_script( 'wau_upload_js', plugins_url('../assets/js/wau_upload_script.js', __FILE__), '', '', false);
+      global $product;
+      if( is_product() && 421== $product->get_id()){
+        wp_enqueue_script( 'wau_upload_js', plugins_url('../assets/js/wau_upload_script.js', __FILE__), '', '', false);
         //wp_localize_script( 'wau_upload_js', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
       }
+      
+    }
+
+    function wau_front_end_cart_scripts_js(){
+      wp_enqueue_script( 'wau_upload_cart_js', plugins_url('../assets/js/wau_upload_cart_script.js', __FILE__), '', '', false);
       
     }
     
@@ -56,17 +62,20 @@ if( ! class_exists( 'wau_front_end_class' ) ){
     }
     
     function addon_uploads_section(){
+      global $product;
       
       $addon_settings = get_option( 'wau_addon_settings' );
       
       if( isset($addon_settings['wau_enable_addon']) && $addon_settings['wau_enable_addon'] === '1' ){
-        $file_upload_template = '<tr>
-            <td class="label"><label for="wau_file_addon">Upload Photo</label></td>
-            <td class="value">
-            <input type="file" name="wau_file_addon" id="wau_file_addon" accept="image/*" class="wau-auto-width wau-files" /></div>
-            </td>
+        if(421 == $product->get_id()){
+          $file_upload_template = '<tr>
+          <td class="label"><label for="wau_file_addon">Upload Photo</label></td>
+          <td class="value">
+          <input type="file" name="wau_file_addon" id="wau_file_addon" accept="image/*" class="wau-auto-width wau-files" /></div>
+          </td>
           </tr>';
           echo $file_upload_template;
+        }
       }
       
     }

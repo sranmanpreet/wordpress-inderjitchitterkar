@@ -98,6 +98,9 @@
                                 <?php
                                     $products = wc_get_products(array() );
                                     foreach ($products as $product) {
+                                        if(421 == $product->get_id()){
+                                            continue;
+                                        }
                                         ?>
                                         <div class="popular-products-item">
                                              <a href="<?php echo get_permalink($product->get_id()); ?>">
