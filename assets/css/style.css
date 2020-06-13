@@ -8,6 +8,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+body.custom-background {
+    background-image: none !important;
+}
+
 a {
     color: #2dc997;
 }
