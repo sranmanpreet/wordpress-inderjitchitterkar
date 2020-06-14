@@ -33,7 +33,7 @@
                 <!-- ======= Advertisement Banner ======= -->
                 <div id="advertisements-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ) ?>)">
                     <h1>Our Colors, Your Brand</h1>
-                    <h1>Let's Conquer the World TOGETHER</h1>
+                    <h1>Let The World know that <span style="color:yellow">Your Brand</span> exists</h1>
                     <hr>
                     <p>Our colors make the walls speak your BRAND and expand your customer base.</p> 
                     <p>We advertise brands by painting walls at public places.</p>

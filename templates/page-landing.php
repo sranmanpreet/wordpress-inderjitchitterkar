@@ -38,12 +38,12 @@
                     <div class="hero-container">
                         <h1><?php the_field('landing_page_subtitle') ?></h1>
                         <div class="wrap-cap">
-                            <h3 class="cap-1">I can help you Artify Yourself</h3>
-                            <h3 class="cap-2">I can create High Quality Art Works for your Home or Office</h3>
-                            <h3 class="cap-3">I can create Art Works which belong only to You</h3>
-                            <h3 class="cap-4">I can help you Promote Your Brand</h3>
+                            <h3 class="cap-1"><?php the_field('landing_page_caption_1') ?></h3>
+                            <h3 class="cap-2"><?php the_field('landing_page_caption_2') ?></h3>
+                            <h3 class="cap-3"><?php the_field('landing_page_caption_3') ?></h3>
+                            <h3 class="cap-4"><?php the_field('landing_page_caption_4') ?></h3>
                         </div>
-                        <a href="<?php echo get_permalink(19) ?>" class="btn-get-started">Let Me Show you our Art Gallery</a>
+                        <a href="<?php echo get_permalink(19) ?>" class="btn-get-started"><?php the_field('landing_page_shop_page_button_text') ?></a>
                     </div>
                 </section>
                 <!-- End Hero Section -->
@@ -54,8 +54,8 @@
                     <section id="services">
                         <div class="container wow fadeIn">
                             <div class="section-header">
-                                <h3 class="section-title">Services</h3>
-                                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                                <h3 class="section-title"><?php the_field('services_heading') ?></h3>
+                                <p class="section-description"><?php the_field('services_description') ?></p>
                             </div>
                             <div class="services-grid-container">
                             <?php
@@ -72,7 +72,7 @@
                                         <div class="middle">
                                             <div class="text"><?php echo get_field('service_description') ?></div>
                                         </div>
-                                        <h6 class="product-title"><?php the_title() ?></h6>
+                                        <a href="<?php echo (get_site_url() . get_field('service_page_link')) ?>"><h6 class="product-title"><?php the_title() ?></h6></a>
                                     </div>
 
                                     <?php
@@ -91,8 +91,8 @@
                     <section id="popular-products">
                         <div class="container">
                             <div class="section-header">
-                                <h3 class="section-title">Popular Arts</h3>
-                                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                                <h3 class="section-title">Art Showcase</h3>
+                                <p class="section-description">Few art works from my Portfolio</p>
                             </div>
                             <div id="popular-products-wrapper">
                                 <?php
@@ -107,7 +107,7 @@
                                                 <?php echo $product->get_image() ?>
                                                 <div class="details">
                                                     <h4><?php echo $product->get_name() ?></h4>
-                                                    <span>Alosdred dono par</span>                                    
+                                                    <span><?php echo $product->get_short_description() ?></span>                                    
                                                 </div>
                                              </a>
                                         </div>
@@ -127,12 +127,12 @@
                             <div class="container">
                                 <div class="section-header advertisements-header">
                                     <h3 class="section-title">Advertisements</h3>
-                                    <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                                    <p class="section-description">We can advertise your BRAND in every cornor of <span style="color:yellow">Punjab</span>, <span style="color:yellow">Haryana</span> and <span style="color:yellow">Himachal Pradesh</span></p>
                                 </div>
                                 <div class="advertisements-wrapper">
                                     <div class="advertisement-desc-1">
-                                        <p>Our COLORS, Your BRAND </p>
-                                        <p>Let's Conquer The World TOGETHER</p>
+                                        <p>Our <span style="color:yellow">Colors</span>, Your <span style="color:yellow">Brand</span> </p>
+                                        <p>Let The World know that <span style="color:yellow">Your Brand</span> exists</p>
                                     </div>
                                     <div class="advertisement-desc-2">
                                         <p class="details"><b>"</b> Our colors make the walls speak your BRAND and expand your customer base. We advertise brands by painting walls at public places. Huge experience of the artists and businessmen brings unique expertise which help brands to
@@ -141,7 +141,7 @@
                                     </div>
                                 </div>
                                 <div class="advertisement-actions">
-                                    <a href="<?php echo site_url() . '/contact' ?>"><button>Get Quote</button></a>
+                                    <a href="<?php echo site_url() . '/order/advertisements' ?>"><button>Get Quote</button></a>
                                     
                                 </div>
                             </div>
@@ -153,8 +153,8 @@
                     <section id="clients">
                         <div class="container">
                             <div class="section-header">
-                                <h3 class="section-title">Our Clients</h3>
-                                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                                <h3 class="section-title">Our Advertising Clients</h3>
+                                <p class="section-description">We took these Businesses to remote corners of <span style="color:#2dc997">Punjab</span>, <span style="color:#2dc997">Haryana</span> and <span style="color:#2dc997">Himachal Pradesh</span></p>
                             </div>
                             <div id="clients-wrapper">
                                 <?php 
@@ -183,8 +183,8 @@
                     <section id="contact">
                         <div class="container wow fadeInUp">
                             <div class="section-header">
-                                <h3 class="section-title">Contact</h3>
-                                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                                <h3 class="section-title">Contact Us</h3>
+                                <p class="section-description">We are all ears..</p>
                             </div>
                         </div>
 
@@ -192,6 +192,7 @@
                             width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
                             
                         <div class="container">
+                            <h1 id="advertisement-form-heading">Write to us and we will get back to you in 24 hours...</h1>
                             <div class="contact-details-section">
                                 <div class="info">
                                     <!-- <div>

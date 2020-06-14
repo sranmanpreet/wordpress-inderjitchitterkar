@@ -267,7 +267,7 @@ h6 {
 .cap-1 {
     visibility: hidden;
     animation-name: hero-caption-animation;
-    animation-duration: 8s;
+    animation-duration: 16s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
 }
@@ -275,24 +275,24 @@ h6 {
 .cap-2 {
     visibility: hidden;
     animation-name: hero-caption-animation;
-    animation-duration: 8s;
-    animation-delay: 2s;
+    animation-duration: 16s;
+    animation-delay: 4s;
     animation-iteration-count: infinite;
 }
 
 .cap-3 {
     visibility: hidden;
     animation-name: hero-caption-animation;
-    animation-duration: 8s;
-    animation-delay: 4s;
+    animation-duration: 16s;
+    animation-delay: 8s;
     animation-iteration-count: infinite;
 }
 
 .cap-4 {
     visibility: hidden;
     animation-name: hero-caption-animation;
-    animation-duration: 8s;
-    animation-delay: 6s;
+    animation-duration: 16s;
+    animation-delay: 12s;
     animation-iteration-count: infinite;
 }
 
