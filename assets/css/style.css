@@ -180,6 +180,7 @@ h6 {
     top: 0;
     left: 0;
     right: 0;
+    padding: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,6 +236,10 @@ h6 {
 #hero .btn-get-started:hover {
     background: #2dc997;
     border: 2px solid #2dc997;
+}
+
+.wrap-cap {
+    padding: 2px;
 }
 
 .wrap-cap h3 {
@@ -1006,7 +1011,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-left: auto;
     margin-right: auto;
     padding: 3vw;
-    font-family: cursive;
+    font-size: large;
     background-color: rgb(110, 110, 110);
     opacity: 0.8;
     color: rgb(255, 255, 255);

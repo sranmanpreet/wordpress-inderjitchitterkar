@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 function inderjitchitterkar_files(){
 
 
-	wp_enqueue_style("inderjitchitterkar_main_styles", get_stylesheet_uri(), NULL, microtime());
+	wp_enqueue_style("inderjitchitterkar_main_styles", get_stylesheet_uri());
 	wp_enqueue_style("inderjitchitterkar_front_page_template_styles", get_theme_file_uri('assets/css/style.css'));
 	
 	wp_enqueue_script("inderjitchitterkar-main", get_theme_file_uri('assets/js/main.js'), null, 1, true);

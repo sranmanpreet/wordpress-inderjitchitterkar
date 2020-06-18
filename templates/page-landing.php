@@ -127,7 +127,7 @@
                             <div class="container">
                                 <div class="section-header advertisements-header">
                                     <h3 class="section-title">Advertisements</h3>
-                                    <p class="section-description">We can advertise your BRAND in every cornor of <span style="color:yellow">Punjab</span>, <span style="color:yellow">Haryana</span> and <span style="color:yellow">Himachal Pradesh</span></p>
+                                    <p class="section-description">We can advertise your BRAND in every corner of <span style="color:yellow">Punjab</span>, <span style="color:yellow">Haryana</span> and <span style="color:yellow">Himachal Pradesh</span></p>
                                 </div>
                                 <div class="advertisements-wrapper">
                                     <div class="advertisement-desc-1">
@@ -135,8 +135,8 @@
                                         <p>Let The World know that <span style="color:yellow">Your Brand</span> exists</p>
                                     </div>
                                     <div class="advertisement-desc-2">
-                                        <p class="details"><b>"</b> Our colors make the walls speak your BRAND and expand your customer base. We advertise brands by painting walls at public places. Huge experience of the artists and businessmen brings unique expertise which help brands to
-                                            grab attention of potential customers. <b>"</b>
+                                        <p class="details">Our colors make the walls speak your BRAND and expand your customer base. We advertise brands by painting walls at public places. Huge experience of the artists and businessmen brings unique expertise which help brands to
+                                            grab attention of potential customers.
                                         </p>
                                     </div>
                                 </div>
